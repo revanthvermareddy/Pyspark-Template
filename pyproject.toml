@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "pyspark-test"
+version = "0.1.0"
+description = ""
+authors = ["Revanth Vermareddy <vermareddyrevanth@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "app"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyspark = "^3.5.1"
+click = "^8.1.7"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+sample_job = "app.jobs.sample:sample_job"
