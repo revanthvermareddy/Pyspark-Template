@@ -6,7 +6,7 @@ import logging
 from pyspark.sql import SparkSession, DataFrame
 
 from app.readers.csv import read_csv
-from app.writers.csv import write_csv
+from app.writers.parquet import write_parquet
 from app.utils.spark import get_spark_session
 from app.transform.common import rename_cols
 
@@ -48,4 +48,5 @@ def sample_job(input_path: str, output_path: str) -> None:
 
     # Write result data
     logging.info(f"Writing data to {output_path}")
-    write_csv(df_transformed, output_path)
+    # write_csv(df_transformed, output_path)
+    write_parquet(df_transformed, output_path)

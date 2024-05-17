@@ -19,4 +19,5 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-sample_job = "app.jobs.sample:sample_job"
+sample_job = "app.jobs.sample_job:sample_job"
+print_parquet = "app.jobs.print_parquet:print_parquet"

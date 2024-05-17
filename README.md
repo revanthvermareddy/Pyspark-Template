@@ -24,20 +24,30 @@ poetry install
 ```
 
 
-## Run the spark job
+## Run the spark jobs
 
 ### In Local
 
 To run the sample_job script using poetry, use the below convention to start the job:
 
 ```bash
-poetry run sample_job  --input_path path_to_input_file --output_pathpath_to_output_folder
+poetry run sample_job --input_path path_to_input_file --output_path path_to_output_folder
+```
+
+To run the print_parquet script using poetry, use the below convention to start the job:
+
+```bash
+poetry run print_parquet --input_path path_to_input_folder
 ```
 
 Example:
 
 ```bash
 poetry run sample_job --input_path data/input/userIds_prod.csv --output_path data/output
+```
+
+```bash
+poetry run print_parquet --input_path data/output
 ```
 
 ### On AWS EMR
